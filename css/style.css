@@ -1,0 +1,623 @@
+/* general styles */
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
+}
+/* general styles */
+
+/* framework */
+
+/* Extra small devices (portrait phones, less than 576px) 
+ No media query since this is the default in Bootstrap */
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .container{
+        width: 540px;
+        margin: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container{
+        width: 720px;
+        margin: auto;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container{
+        width: 960px;
+        margin: auto;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container{
+        width: 1140px;
+        margin: auto;
+    }
+}
+/* framework */
+
+/* components */
+.btn-trans{
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.btn-main{
+    border: 1px solid #0dde0d;
+    color: #0dde0d!important;
+}
+.btn-white{
+    border: 1px solid #fff;
+    color: #fff!important;
+}
+.text-center{text-align: center}
+.block-center{margin:auto;}
+.list-unstyled{
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+}
+.list-unstyled a{
+    color: #fff;
+    text-decoration: none;
+}
+.list-inline > li{
+    display: inline-block;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.main-color{
+    color: #0dde0d
+}
+.main-bg{
+    background-color: #0dde0d;
+}
+.desc-color{color:#9c9c9c;line-height: 1.7;}
+.hed-color{color: #686969}
+.degree{
+    padding: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 80%;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.mt-5{margin-top: 50px;}
+/* components */
+
+
+/************************************************* start header  *********************************************/
+
+header{}
+/* slider */
+header .slider{
+    height: 100vh;
+    background: url(../images/man.jpg) center center ;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header .slider::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header .slider .info{
+    max-height:60%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .slider .info h1{
+    padding: 15px 0;
+    margin: 30px 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 3rem;
+}
+header .slider .info button:hover{border-color: #0dde0d;cursor: pointer;transition: all 0.8s ease;}
+/* slider */
+
+/* navbar */
+header nav {
+    background-color: #3D3A35;
+    padding: 15px 0;
+}
+header nav .nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: #fff;
+}
+header nav .nav-content .links{padding-top: .5%;}
+header nav .nav-content .links li a{transition: color 0.5s ease;}
+header nav .nav-content .links li a:hover{color: #0dde0d;}
+header nav .nav-content .logo{display: flex;}
+header nav .nav-content .logo > span{display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background-color: rgb(141, 141, 141);
+    margin-right: 10px;
+    font-size: 110%;
+    font-weight: bold;
+}
+header nav .nav-content .logo h2{margin: 0}
+header nav .nav-content .links li:not(:last-of-type){margin-right: 20px;}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+ header nav .nav-content{
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+ }
+ header nav .nav-content .links{
+     margin-top: 15px;
+ }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    header .slider .info h1{font-size: 2rem;}
+    header nav .nav-content{
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+    }
+    header nav .nav-content .links{
+        margin-top: 15px;
+    }
+    header nav .nav-content .links li a{
+        font-size: 75%;
+    }
+}
+@media (max-width: 575px) { 
+    .slider{
+        display: none!important;
+    }
+    header .slider .info h1{font-size: 2rem;}
+    header nav .nav-content{
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+        padding-right: 20px;
+        padding-left: 20px; 
+    }
+    header nav .nav-content .links{
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    header nav .nav-content .links li{
+        display: block!important;
+        padding: 10px;
+        background-color: #293129;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    header nav .nav-content .links li a{
+        font-size: 75%;
+    }
+}
+/*  */
+/* navbar */
+/************************************************* end header  *********************************************/
+
+/************************************************* start extra  *********************************************/
+.extra{
+    padding: 40px 0;
+}
+.extra .extra-content{
+    display: flex;
+}
+.extra .extra-content div{
+    width: calc(100%/3);
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .extra .extra-content{
+        flex-direction: column;
+    }
+    .extra .extra-content div{
+        width: 100%;
+        text-align: center;
+    } 
+}
+@media (max-width: 575px) { 
+    .extra .extra-content{
+        flex-direction: column;
+    }
+    .extra .extra-content div{
+        width: 100%;
+        text-align: center;
+    } 
+    .extra{
+        padding: 40px 20px;
+    }
+}
+/************************************************* start extra  *********************************************/
+
+/************************************************* start about  *********************************************/
+.about{
+    display: flex;
+}
+.about .about-image{
+    width: calc(100%/3);
+    max-height: 100%;
+    background:url(../images/man.jpg) right center;
+    background-size: cover;
+}
+.about .about-info{
+    width: calc(200%/3);
+    padding: 60px;
+    background-color: #F1F1F1;
+}
+.about .jobs{
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about .job{
+    width: calc(50% - 2%);
+    display: flex;
+    margin-bottom: 30px;
+}
+.about .job:nth-child(3),
+.about .job:nth-child(4){
+    margin-bottom: 0;
+}
+.about .job:not(:nth-child(even)){margin-right: 4%;}
+.about .job  .job-icon{margin-right: 5%;}
+.about .job .job-desc h3{margin-top: 0;}
+@media (min-width:992px) and (max-height:1199px){
+    
+}
+@media screen and (max-width: 991px){
+    .about{
+        flex-direction: column;
+    }
+    .about .about-image{display: none;}
+    .about .about-info{width: 100%;}
+
+}
+@media screen and (max-width: 575px){
+    .about .jobs{
+        display: flex;
+        flex-direction: column;
+    }
+    .about .job{
+        width: calc(100%);
+    }
+}
+/************************************************* end about  *********************************************/
+
+/************************************************* start skills  *********************************************/
+.my-skills{
+    padding: 50px 0;
+}
+.my-skills .skills-content {
+    display: flex;
+    justify-content: space-between;
+}
+.my-skills .skills-content .skills-description{
+    width: 50%;
+}
+.my-skills .skills-content .skills-description h2{
+    margin-top: 0;
+}
+.my-skills .skills-content .skills-description button:hover{
+    background-color: #0dde0d;
+    color: #fff!important;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+.my-skills .skills-content .skills-stat{
+    width: 45%;
+}
+.my-skills .skills-content .skills-stat .skill-stat .progress{
+    height: 20px;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.my-skills .skills-content .skills-stat .skill-stat .progress span{
+    height: 20px;
+    border-radius: 2px;
+    background-color: #0dde0d;
+    padding: 0 5px;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.my-skills .skills-content .skills-stat .skill-stat:first-child .progress span{width: 90%}
+.my-skills .skills-content .skills-stat .skill-stat:nth-child(2) .progress span{width: 80%}
+.my-skills .skills-content .skills-stat .skill-stat:nth-child(3) .progress span{width: 90%;}
+.my-skills .skills-content .skills-stat .skill-stat:last-child .progress span{width: 70%;}
+@media screen and (max-width: 767px){
+    .my-skills .skills-content {
+        flex-direction: column;
+        justify-content: normal;
+    }
+    .my-skills .skills-content .skills-description{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .my-skills .skills-content .skills-stat{
+        width: 100%;
+    }
+}
+@media screen and (max-width:575px){
+    .my-skills{
+        padding: 50px 20px;
+    }
+}
+/************************************************* start skills  *********************************************/
+
+/************************************************* start resume  *********************************************/
+.resume{
+    padding: 50px 0;
+    background-color: #F1F1F1;
+    position: relative;
+    text-align: center;
+}
+.resume p{margin-bottom: 30px}
+.resume button:hover{
+    background-color: #0dde0d;
+    color: #fff!important;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+.resume::after{
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: -40px;
+    border: 20px solid #F1F1F1;
+    left: calc(50% - 20px);
+    border-color: #F1F1F1 transparent transparent transparent;
+}
+@media screen and (max-width:575px){
+    .resume{
+        padding: 50px 20px;
+    }
+}
+/* ************************************************ end resume  ******************************************** */
+
+/* ************************************************ start my education  ******************************************** */
+.my-education{
+    padding: 60px 0;
+}
+.my-education .my-education-content{display: flex;}
+.my-education .my-education-content .my-education-description {width: 50%;margin-right: 5%;}
+.my-education .my-education-content .my-deplomas {width: 45%;}
+@media screen and (max-width:575px){
+    .my-education{
+        padding: 60px 20px;
+    }
+    .my-education .my-education-content{
+        flex-direction: column;
+    }
+    .my-education .my-education-content .my-education-description {
+        width: 100%;
+        margin-right: 0%;
+    }
+    .my-education .my-education-content .my-deplomas {width: 100%;}
+}
+/* ************************************************ end my education  ******************************************** */
+
+/* ************************************************ start my experience  ******************************************** */
+.my-experience{padding: 60px 0;}
+.my-experience .my-experience-content{display: flex;}
+.my-experience .my-experience-content .my-experience-description {width: 50%;margin-right: 5%;}
+.my-experience .my-experience-content .my-works {width: 45%;}
+@media screen and (max-width:575px){
+    .my-experience{
+        padding: 60px 20px;
+    }
+    .my-experience .my-experience-content{
+        flex-direction: column;
+    }
+    .my-experience .my-experience-content .my-experience-description {
+        width: 100%;
+        margin-right: 0%;
+    }
+    .my-experience .my-experience-content .my-works {width: 100%;}
+}
+/* ************************************************ start my experience  ******************************************** */
+
+/* ************************************************ start quats  ******************************************** */
+.quats{
+    padding: 50px 0;
+    background-color: #F1F1F1;
+    position: relative;
+    text-align: center;
+}
+.quats .quats-content .quat:not(:first-of-type){display: none;}
+.quats .controls li{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #0dde0d;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.quats .controls li:not(:last-child){
+    margin-right: 5px;
+}
+.quats .controls li:hover{background-color: #0dde0d}
+.sw-active{background-color: #0dde0d;}
+@media screen and (max-width:575px){
+    .quats{
+        padding: 50px 20px;
+    }
+}
+/* ************************************************ end quats  ******************************************** */
+/* ************************************************ start portfolio  ******************************************** */
+.portfolio{
+    padding:50px 0;
+}
+.portfolio .portfolio-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.portfolio .portfolio-items .item{
+    width: 30%;
+    height: 340px;
+    background-color: #3D3A35;
+    margin-bottom: 3%;
+    position: relative;
+}
+.portfolio .portfolio-items .item::before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width:100%;
+    background: rgba(0, 255, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.portfolio .portfolio-items .item img{
+    max-width: 100%;
+    height: 100%;
+}
+.portfolio .portfolio-items .item i{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    opacity: 0;
+}
+.portfolio .portfolio-items .item:hover i,
+.portfolio .portfolio-items .item:hover::before{
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+@media screen and (max-width: 767px){
+    .portfolio .portfolio-items .item{
+        width: 45%; 
+        margin-bottom: 10%;
+    }  
+}
+@media screen and (max-width:575px){
+    .portfolio .portfolio-items .item{
+        width: 100%; 
+        margin-bottom: 10%;
+        margin-right: 0;
+    }
+    .portfolio{
+        padding: 50px 20px;
+    }
+}
+/* ************************************************ end portfolio  ******************************************** */
+/* ************************************************ start contact me  ******************************************** */
+
+.contact{
+    padding: 50px 0;
+    background-color: #252F31;
+}
+.contact-content{
+    display: flex;
+}
+.contact-info{
+    width: 45%;
+    margin-right: 5%;
+}
+.contact-info h2{color: #fff;}
+.contact-info .adress{
+    margin: 30px 0;
+}
+.contact-info .curdentiels li span{
+    color: #fff;
+    display: inline-block;
+    margin-right: 20px;
+}
+.contact-form{
+    width: 50%;
+    padding-top: 30px;
+}
+.contact-form .form-field{
+    margin-bottom: 25px;
+}
+.contact-form .form-field label{
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact-form .form-field input{
+    background-color: #4B5557;
+    width: 100%;
+    padding: 15px;
+    border: none;
+}
+.contact-form .contact-btn{
+    background-color: #191E22;
+    padding: 0.8rem 1rem;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+.contact-form .contact-btn:hover{
+    background-color: rgb(64, 65, 66);
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+@media screen and (max-width: 767px){
+    .contact-content{
+        flex-direction: column;
+    }
+    .contact-info{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .contact-form{
+        width: 100%;
+    }
+}
+@media screen and (max-width:575px){
+    .contact{
+        padding: 50px 20px;
+    }
+}
+/* ************************************************ end contact me  ******************************************** */
+/* footer */
+footer{
+    padding: 40px 0;
+    background-color: #191E22;
+}
+footer li:not(:last-child){margin-right: 10px;}
+footer i{cursor: pointer;}
+footer i:hover{
+    transform: scale(1.3);
+    transition: all 0.8s ease;
+}
+/* footer */
